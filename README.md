@@ -34,5 +34,5 @@ From `redis-cli`, the following commands provide interesting information:
    Returns the top 10 most used hashtags over the last 10-minute window recorded
  - `zrevrange hashtags 0 9 withscores`  
    Same as the above, but also includes the number of times each one appeared
- - `zcard hashtags`
+ - `zcard hashtags`  
    The total number of ditinct hashtags that have been observed
