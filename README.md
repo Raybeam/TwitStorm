@@ -24,3 +24,15 @@ This project was written in [IntelliJ][idea], and no attempt was made to make it
  [idea]: http://www.jetbrains.com/idea/
 
 TwitStorm also requires a running redis server on localhost.
+
+Getting the Results
+-------------------
+
+From `redis-cli`, the following commands provide interesting information:
+
+ - `zrevrange hashtags 0 9`  
+   Returns the top 10 most used hashtags over the last 10-minute window recorded
+ - `zrevrange hashtags 0 9 withscores`  
+   Same as the above, but also includes the number of times each one appeared
+ - `zcard hashtags`  
+   The total number of ditinct hashtags that have been observed
